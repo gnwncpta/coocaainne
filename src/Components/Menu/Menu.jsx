@@ -21,12 +21,12 @@ export default function Menu(){
                     </div>
 
                     <div>
-                        <Link to="/artworks" className="py-2 px-6 mx-5 rounded-full hover:bg-white hover:text-black">Artworks</Link>
-                        <Link to="/archived-design" className="py-2 px-6 mx-5 rounded-full hover:bg-white hover:text-black">Archived Design</Link>
-                        <Link to="/design" className="py-2 px-6 mx-5 rounded-full hover:bg-white hover:text-black">Design</Link>
+                        <Link to="/artworks" className="py-2 px-6 mx-5 text-sm rounded-full hover:bg-white hover:text-black">Artworks</Link>
+                        <Link to="/archived-design" className="py-2 px-6 mx-5 text-sm rounded-full hover:bg-white hover:text-black">Archived Design</Link>
+                        <Link to="/design" className="py-2 px-6 mx-5 text-sm rounded-full hover:bg-white hover:text-black">Design</Link>
                     </div>
 
-                    <Link to="/about" className="py-2 px-8 rounded-full hover:bg-cco hover:text-black">About</Link>
+                    <Link to="/about" className="py-2 px-8 text-sm rounded-full hover:bg-cco hover:text-black">About</Link>
                 </header>
             </section>
 
