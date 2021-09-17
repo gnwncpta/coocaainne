@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import sort from '../../assets/sort-solid.svg';
 
 // Assets
+import logo from '../../assets/cco-logo.png';
 import artwork1 from '../../assets/artworks/1.svg';
 import artwork2 from '../../assets/artworks/2.svg';
 import artwork3 from '../../assets/artworks/3.svg';
@@ -44,18 +45,24 @@ export default function Artworks(props){
     function oldestSort(){
         let oldest = [];
 
-        for(let i = assetsCollection.length; i > 0; i--){
+        for(let i = assetsCollection.length; i >= 0; i--){
             oldest.push(assetsCollection[i]);
         }
 
         return oldest.map((artwork, index) => {
-            return <img key={index+1} src={artwork.artwork} alt="artwork" width="330px" className="hover:border hover:border-gray-700" />
+            const oldestDOM = [];
+
+            if(index !== 0){
+                oldestDOM.push(<Item key={index+1} design={artwork} />);
+            }
+
+            return oldestDOM;
         });
     }
 
     function newestSort(){
         return assetsCollection.map((artwork, index) => {
-            return <Item design={artwork} />
+            return <Item key={index+1} design={artwork} />
         });
     }
 
@@ -66,10 +73,10 @@ export default function Artworks(props){
     }
 
     return (
-        <div className="bg-black h-max" onClick={ArtworksHandler}>
+        <div className="bg-black h-full" onClick={ArtworksHandler}>
             <div className="mx-32">
 
-                <div className="flex items-center justify-between border-b border-white bg-black">
+                <div className="flex items-center justify-between border-b border-white border-opacity-20 bg-black">
                     <div className="py-5">
                         <h1 className="text-white text-2xl font-medium">Artworks</h1>
                         <p className="text-white text-sm font-light">Recent Artworks</p>
@@ -90,9 +97,20 @@ export default function Artworks(props){
                 </div>
 
 
-                <div className="grid grid-cols-3 gap-12 justify-items-center py-10">
+                <div className="grid grid-cols-3 gap-12 justify-items-center py-20">
                     { oldest ? oldestSort() : newestSort() }
                 </div>
+
+                <footer className="flex items-center justify-between py-20">
+                    <img src={logo} alt="Footer Logo" width="40px" />
+
+
+                    <div>
+                        <a href="https://instagram.com/coocaainne" alt="instagram" className="mx-4 text-white text-sm hover:underline">Instagram</a>
+                        <a href="https://behance.com/coocaainne" alt="behance" className="mx-4 text-white text-sm hover:underline">Behance</a>
+                        <a href="https://dribbble.com/coocaainne" alt="dribbble" className="mx-4 text-white text-sm hover:underline">Dribbble</a>
+                    </div>
+                </footer>
 
             </div>
         </div>
