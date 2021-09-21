@@ -19,7 +19,7 @@ export default function SortMenu(props){
     }
 
     return (
-        <div className="bg-darkcco my-4 py-4 w-60 rounded-lg absolute">
+        <div className="bg-filter my-4 py-4 w-60 rounded-lg absolute">
             <p className="py-4 px-6 text-white text-sm hover:bg-white hover:text-black cursor-pointer" onClick={oldestHandler}>Oldest</p>
             <p className="py-4 px-6 text-white text-sm hover:bg-white hover:text-black cursor-pointer" onClick={newestHandler}>Newest</p>
         </div>
