@@ -24,7 +24,7 @@ import SortMenu from "./SortMenu";
 
 export default function Artworks(props){
 
-    const { show, setShow } = props;
+    const { show, setShow, setExplore } = props;
 
     const ccoWords = [ '@COOCAAINNE in the Gang', 'COOCAAINNE in the Chain', 'CCO IN THE GANG' ];
 
@@ -49,6 +49,7 @@ export default function Artworks(props){
     ];
 
     useEffect(() => {
+        setExplore(false);
         window.document.title = 'Artworks';
         return () => window.document.title = "COOCAAINNE";
     });
@@ -95,10 +96,10 @@ export default function Artworks(props){
     }
 
     return (
-        <div className="bg-black h-full" onClick={ArtworksHandler}>
-            <div className="mx-8 lg:mx-32">
+        <div className="bg-darkcco h-full" onClick={ArtworksHandler}>
+            <div className="mx-8 md:mx-24 xl:mx-32">
 
-                <div className="flex items-center justify-between border-b border-white border-opacity-20 bg-black">
+                <div className="flex items-center justify-between border-b border-white border-opacity-20 bg-darkcco">
                     <div className="py-5">
                         <h1 className="text-white text-2xl font-medium">Artworks</h1>
                         <p className="text-white text-sm font-light">Collections of Artworks</p>
@@ -109,7 +110,7 @@ export default function Artworks(props){
 
                 <div className="py-6">
                     <div>
-                        <button className="flex items-center text-sm py-3 px-2 lg:px-4 text-white border-b-0 rounded-lg hover:bg-darkcco" onClick={() => setShowSortMenu(showSortMenu ? false : true)}>
+                        <button className="flex items-center text-sm py-3 px-2 lg:px-4 text-white border-b-0 rounded-lg hover:bg-filter" onClick={() => setShowSortMenu(showSortMenu ? false : true)}>
                             <img src={sort} width="12px" alt="sort_icon" className="mr-2" />
                             Filter Artworks
                         </button>
