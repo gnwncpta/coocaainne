@@ -15,7 +15,7 @@ export default function About(props){
 
     function GraphicDesignHandler(){
         const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is <span className="underline">Gunawan Cipta</span><br/>
-        I’ve been doing graphic design since 2 years ago.
+        I’ve been doing graphic design since 3 years ago.
         <br />
         <br />
         if you don’t know my instagram, you can click that follow button
@@ -25,15 +25,15 @@ export default function About(props){
     }
 
     function UIDesignHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">After i create this site i need to design the web before get jump into code.<br /><br />
-        The tools that i used is: Figma</p>
+        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Before i create this site i need to design the UI & UX to make better user experience and interface.<br /><br />
+        The tools that i used is: <br /> - Figma</p>
 
         setDesc(theDesc);
     }
 
     function FrontEndDevHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">After designing the page i need to slicing the design into web page.<br /><br />
-        The tools for helping me developing are: <br /><br /> ( ReactJS ) for helping me structure the code, <br /> ( Tailwind CSS ) for helping me styling the page</p>
+        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">After design the web page, I need to slicing the design into code. So you can interact with it.<br /><br />
+        The tools for helping me developing are: <br /><br />- ReactJS for helping me structure the code & development <br />- Tailwind CSS for helping me slicing & styling the page</p>
 
         setDesc(theDesc);
     }
