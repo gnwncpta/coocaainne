@@ -26,7 +26,7 @@ export default function Menu(){
     return (
         <Router>
             <section className="mx-auto bg-black py-10" onClick={menuHandler}>
-                <header className="2xl:mx-32 text-white flex items-center justify-between mx-8">
+                <header className="lg:mx-32 text-white flex items-center justify-between mx-8">
                     <div className="logo">
                         <Link to="/">
                             <img src={logo} width="40px" className="cursor-pointer" alt="Logo" />
