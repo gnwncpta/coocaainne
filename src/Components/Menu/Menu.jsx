@@ -59,7 +59,7 @@ export default function Menu(){
 
             <Switch>
                 <Route exact path="/">
-                    { explore ? <Redirect to="/artworks" /> : <Home show={show} setShow={setShow} explore={explore} setExplore={setExplore} />}
+                    { explore ? <Redirect to="/artworks" /> : <Home show={show} setShow={setShow} setExplore={setExplore} />}
                 </Route>
                 <Route path="/artworks">
                     <Artworks show={show} setShow={setShow} />

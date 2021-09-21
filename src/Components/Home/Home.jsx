@@ -7,7 +7,7 @@ export default function Home(props){
 
     const { 
         show, setShow,
-        explore, setExplore
+        setExplore
     } = props;
 
     useEffect(() => {
