@@ -25,8 +25,8 @@ export default function Menu(){
 
     return (
         <Router>
-            <section className="mx-auto bg-black py-10" onClick={menuHandler}>
-                <header className="lg:mx-32 text-white flex items-center justify-between mx-8">
+            <section className="mx-auto bg-darkcco py-10" onClick={menuHandler}>
+                <header className="xl:mx-32 md:mx-24 text-white flex items-center justify-between mx-8">
                     <div className="logo">
                         <Link to="/">
                             <img src={logo} width="40px" className="cursor-pointer" alt="Logo" />
@@ -62,7 +62,7 @@ export default function Menu(){
                     { explore ? <Redirect to="/artworks" /> : <Home show={show} setShow={setShow} setExplore={setExplore} />}
                 </Route>
                 <Route path="/artworks">
-                    <Artworks show={show} setShow={setShow} />
+                    <Artworks show={show} setShow={setShow} setExplore={setExplore} />
                 </Route>
                 <Route path="/archived-design">
                     <ArchivedDesign />
