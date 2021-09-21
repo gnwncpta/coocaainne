@@ -34,21 +34,17 @@ export default function Menu(){
                     </div>
 
                     <div className="hidden lg:flex flex-col lg:static lg:flex-row lg:bg-transparent lg:py-0">
-
                         <Link to="/artworks" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black lg:text-white">Artworks</Link>
                         <Link to="/archived-design" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black lg:text-white">Archived Design</Link>
                         <Link to="/design" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black lg:text-white">Design</Link>
-
                     </div>
 
                     <div className="z-20 w-screen py-2 fixed bottom-1-prcnt left-0 flex flex-col items-center justify-center">
                         {show &&
                             <div className="z-20 mb-3 right-20-screen bottom-12-prcnt bg-cco py-8 flex flex-col rounded-lg lg:static lg:flex-row lg:bg-transparent lg:py-0">
-
                                 <Link to="/artworks" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black">Artworks</Link>
                                 <Link to="/archived-design" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black">Archived Design</Link>
                                 <Link to="/design" className="py-2 px-6 my-2 mx-5 text-sm rounded-full text-black hover:bg-white hover:text-black">Design</Link>
-
                             </div>
                         }
 
