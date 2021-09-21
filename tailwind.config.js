@@ -21,6 +21,8 @@ module.exports = {
       },
       width: {
         '100': '100px',
+        '120': '120px',
+        '150': '150px',
         '200': '200px',
         '300': '300px',
         '400': '400px',
@@ -45,7 +47,8 @@ module.exports = {
       },
       backgroundColor: {
         'cco': '#BAFF00',
-        'darkcco': '#1f1f1f'
+        'darkcco': '#010101',
+        'filter': '#1f1f1f'
       },
       screens: {
         '1440': { 'max': '1440px' },
