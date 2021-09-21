@@ -1,5 +1,4 @@
 import "tailwindcss/tailwind.css";
-import arrow from "../../assets/arrow.svg";
 
 export default function Item(props){
     const { artwork, name, date } = props.design;
