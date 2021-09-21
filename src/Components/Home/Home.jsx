@@ -27,7 +27,7 @@ export default function Home(props){
                         <p className="text-white mb-7 font-light text-sm">What's good man ? Take a time to explore my crib.<br />Are you a dev ?</p>
 
                         <div className="buttons">
-                            <a href="http://localhost:3000/artworks" className="py-2 px-8 rounded-full bg-white text-sm">Explore</a>
+                            <a href="https://focused-ride-5441a6.netlify.app/artworks" className="py-2 px-8 rounded-full bg-white text-sm">Explore</a>
                             <button className="py-2 px-8 text-white text-sm">Download CV</button>
                         </div>
                     </div>
