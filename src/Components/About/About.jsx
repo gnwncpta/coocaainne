@@ -14,7 +14,7 @@ export default function About(props){
     const [ desc, setDesc ] = useState('');
 
     function GraphicDesignHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is Muhammad Gunawan Cipta Negara<br/>
+        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is <span className="underline">Gunawan Cipta</span><br/>
         I’ve been doing graphic design since 2 years ago.
         <br />
         <br />
