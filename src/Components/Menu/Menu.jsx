@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import "tailwindcss/tailwind.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 // Components
 import Home from '../Home/Home';
@@ -17,6 +17,7 @@ import x from '../../assets/X.svg';
 export default function Menu(){
 
     const [ show, setShow ] = useState(false);
+    const [ explore, setExplore ] = useState(false);
 
     function menuHandler(){
         if(show) setShow(false);
@@ -62,7 +63,7 @@ export default function Menu(){
 
             <Switch>
                 <Route exact path="/">
-                    <Home show={show} setShow={setShow} />
+                    { explore ? <Redirect to="/artworks" /> : <Home show={show} setShow={setShow} explore={explore} setExplore={setExplore} />}
                 </Route>
                 <Route path="/artworks">
                     <Artworks show={show} setShow={setShow} />
