@@ -12,9 +12,17 @@ export default function About(props){
     });
 
     const [ desc, setDesc ] = useState('');
+    const [ graphicActive, setGraphicActive ] = useState(false);
+    const [ uiActive, setUIActive ] = useState(false);
+    const [ feActive, setFEActive ] = useState(false);
 
     function GraphicDesignHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is <span className="font-mono px-2 rounded-sm text-black bg-cco">Gunawan Cipta</span><br/>
+        // Set indicator active & inactive
+        if(uiActive) setUIActive(false);
+        if(feActive) setFEActive(false);
+        setGraphicActive(true);
+
+        const theDesc = <p className="px-2 lg:px-12 text-white text-sm">Hi! my name is <span className="font-mono px-2 rounded-sm text-black bg-cco">Gunawan Cipta</span><br/>
         I’ve been doing graphic design since 3 years ago.
         <br />
         <br />
@@ -25,14 +33,24 @@ export default function About(props){
     }
 
     function UIDesignHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Before i create this site i need to design the UI & UX to make better user experience and interface.<br /><br />
+        // Set indicator active & inactive
+        if(graphicActive) setGraphicActive(false);
+        if(feActive) setFEActive(false);
+        setUIActive(true);
+
+        const theDesc = <p className="px-2 lg:px-12 text-white text-sm">Before i create this site i need to design the UI & UX to make better user experience and interface.<br /><br />
         The tools for help me designing is: <br /> <span className="px-2 rounded-sm text-black bg-cco">- Figma</span></p>
 
         setDesc(theDesc);
     }
 
     function FrontEndDevHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">After design the web page, I need to slicing the design into code. So you can interact with it.<br /><br />
+        // Set indicator active & inactive
+        if(graphicActive) setGraphicActive(false);
+        if(uiActive) setUIActive(false);
+        setFEActive(true);
+
+        const theDesc = <p className="px-2 lg:px-12 text-white text-sm">After design the web page, I need to slicing the design into code. So you can interact with it.<br /><br />
         The tools for help me developing are: <br /><br /><span className="px-2 rounded-sm text-black bg-cco">- React JS</span> for helping me structure the code & development <br /><span className="px-2 rounded-sm text-black bg-cco">- Tailwind CSS</span> for helping me slicing & styling the page</p>
 
         setDesc(theDesc);
@@ -64,13 +82,13 @@ export default function About(props){
                     </div>
 
                     <div className="profile-down h-300 w-screen mt-20 md:w-full">
-                        <div className="px-5 border-b border-white border-opacity-20 lg:px-14 flex items-end md:items-center justify-between">
-                            <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={GraphicDesignHandler}>Graphic Design</button>
-                            <button className="h-80 px-3 text-white text-center lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={UIDesignHandler}>UI Design</button>
-                            <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={FrontEndDevHandler}>Front End Dev</button>
+                        <div className="px-5 border-b border-white border-opacity-20 lg:px-0 flex items-end md:items-center justify-between">
+                            {graphicActive ? <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-70" onClick={GraphicDesignHandler}>Graphic Design</button> : <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0" onClick={GraphicDesignHandler}>Graphic Design</button>}
+                            {uiActive ? <button className="h-80 px-3 text-white text-center lg:text-center text-sm w-full border-b-2 border-opacity-70" onClick={UIDesignHandler}>UI Design</button> : <button className="h-80 px-3 text-white text-center lg:text-center text-sm w-full border-b-2 border-opacity-0" onClick={UIDesignHandler}>UI Design</button>}
+                            {feActive ? <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-70" onClick={FrontEndDevHandler}>Front End Dev</button> : <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0" onClick={FrontEndDevHandler}>Front End Dev</button>}
                         </div>
 
-                        <div className="mt-10 px-5">
+                        <div className="mt-10 px-5 lg:px-0">
                             {desc}
                         </div>
                     </div>
