@@ -20,14 +20,14 @@ export default function Home(props){
     }
 
     return (
-        <div className="bg-darkcco mx-auto h-max lg:h-800 flex items-center justify-start md:h-max" onClick={menuHandler}>
+        <div className="bg-darkcco mx-auto h-screen lg:h-screen flex items-center justify-start md:h-max" onClick={menuHandler}>
             <div className="w-full mx-8 my-8 flex flex-col items-center justify-between md:mx-24 lg:my-8 lg:flex-row xl:mx-32">
                 <div className="typography w-full mb-22 relative lg:mx-0 2xl:mx-20">
                     <div className="z-10 relative">
                         <h1 className="text-white font-light mb-7 leading-normal text-5xl 2xl:text-7xl lg:text-6xl">
                             <span className="text-black">W</span>elcome to<br />Koken's Crib
                         </h1>
-                        <p className="text-white mb-7 font-light text-sm">What's good man ? Take a time to explore my crib.<br />Are you a dev ?</p>
+                        <p className="text-white mb-7 font-light text-sm">What's good man ? Take a time to explore my crib.<br /></p>
 
                         <div className="buttons">
                             <button className="py-2 px-8 rounded-full bg-white text-sm" onClick={setExplore}>Explore</button>
