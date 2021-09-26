@@ -3,6 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderColor: {
+        'cco': '#BAFF00',
+      },
+      ringColor: {
+        'cco': '#BAFF00',
+      },
       inset: {
         '1-prcnt': '1%',
         '2-prcnt': '2%',
@@ -20,6 +26,7 @@ module.exports = {
         '50-screen': '50vw',
       },
       width: {
+        '50': '50px',
         '100': '100px',
         '120': '120px',
         '150': '150px',
@@ -34,6 +41,8 @@ module.exports = {
         '1000': '1000px',
       },
       height: {
+        '50': '50px',
+        '80': '80px',
         '100': '100px',
         '200': '200px',
         '300': '300px',
