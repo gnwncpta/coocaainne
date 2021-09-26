@@ -14,7 +14,7 @@ export default function About(props){
     const [ desc, setDesc ] = useState('');
 
     function GraphicDesignHandler(){
-        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is <span className="underline">Gunawan Cipta</span><br/>
+        const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Hi! my name is <span className="font-mono px-2 rounded-sm text-black bg-cco">Gunawan Cipta</span><br/>
         I’ve been doing graphic design since 3 years ago.
         <br />
         <br />
@@ -26,14 +26,14 @@ export default function About(props){
 
     function UIDesignHandler(){
         const theDesc = <p className="px-2 lg:px-14 text-white text-sm">Before i create this site i need to design the UI & UX to make better user experience and interface.<br /><br />
-        The tools that i used is: <br /> - Figma</p>
+        The tools for help me designing is: <br /> <span className="px-2 rounded-sm text-black bg-cco">- Figma</span></p>
 
         setDesc(theDesc);
     }
 
     function FrontEndDevHandler(){
         const theDesc = <p className="px-2 lg:px-14 text-white text-sm">After design the web page, I need to slicing the design into code. So you can interact with it.<br /><br />
-        The tools for helping me developing are: <br /><br />- ReactJS for helping me structure the code & development <br />- Tailwind CSS for helping me slicing & styling the page</p>
+        The tools for help me developing are: <br /><br /><span className="px-2 rounded-sm text-black bg-cco">- React JS</span> for helping me structure the code & development <br /><span className="px-2 rounded-sm text-black bg-cco">- Tailwind CSS</span> for helping me slicing & styling the page</p>
 
         setDesc(theDesc);
     }
@@ -42,35 +42,35 @@ export default function About(props){
         <div className="bg-darkcco h-screen">
             <div className="h-600 flex flex-col justify-start lg:justify-center items-center mx-8 lg:mx-32">
 
-                <div className="w-full lg:w-700 flex flex-col items-center">
-                    <div className="w-full lg:px-14 profile-top flex items-center justify-between md:w-400 md:justify-around">
-                        <img src={me} alt="My self" width="200px" className="w-120 mr-4 md:w-150 lg:w-200 lg:mr-10" />
+                <div className="w-full lg:w-600 flex flex-col items-center">
+                    <div className="w-full lg:px-14 profile-top flex items-start justify-between md:w-400 md:justify-around">
+                        <img src={me} alt="My self" width="150px" className="w-100 p-1 mr-4 md:w-150 lg:w-150 lg:mr-10 rounded-full border-0 border-transparent ring-2 ring-cco ring-offset-3 outline-none" />
 
-                        <div>
-                            <p className="text-sm text-white font-light">Hi! People know me as</p>
-                            <a href="https://instagram.com/coocaainne" target="_blank" rel="noreferrer" className="my-2 text-xl lg:text-3xl text-white font-bold hover:underline">@COOCAAINNE</a>
+                        <div className="w-full">
+                            <p className="text-sm text-white font-light">People know me as</p>
+                            <a href="https://instagram.com/coocaainne" target="_blank" rel="noreferrer" className="my-2 text-2xl lg:text-3xl text-white font-bold hover:underline">COOCAAINNE</a>
 
-                            <div className="flex flex-col items-start lg:flex-row lg:items-center justify-center my-5">
+                            <div className="flex flex-col items-start lg:flex-row lg:items-center justify-center my-3">
                                 <p className="w-full text-gray-500 text-left font-light text-sm mr-4">Graphic Designer</p>
                                 <p className="w-full text-gray-500 text-left font-light text-sm mr-4">Front End Dev</p>
                                 <p className="w-full text-gray-500 text-left font-light text-sm">UI Designer</p>
                             </div>
 
                             <div className="flex items-center">
-                                <a href="https://instagram.com/coocaainne" className="py-2 px-4 md:px-6 lg:px-8 bg-blue-500 text-sm font-medium text-white rounded-md mr-2" onClick={() => window.location.href="https://instagram.com/coocaainne"}>Follow</a>
-                                <a href="mailto:gnwncpta@gmail.com" className="py-2 px-4 md:px-6 lg:px-8 bg-transparent border border-gray-400 text-sm text-gray-400 rounded-md hover:text-black hover:bg-white hover:border-transparent">Email</a>
+                                <a href="https://instagram.com/coocaainne" target="_blank" rel="noreferrer" className="w-full py-2 px-5 md:px-6 lg:px-8 bg-blue-500 text-sm font-medium text-white rounded-md mr-2">Follow</a>
+                                <a href="mailto:gnwncpta@gmail.com" className="w-full py-2 px-5 md:px-6 lg:px-8 bg-transparent border border-gray-400 text-sm text-center text-gray-400 rounded-md hover:text-black hover:bg-white hover:border-transparent">Email</a>
                             </div>
                         </div>
                     </div>
 
-                    <div className="profile-down w-full h-100 mt-20 md:w-500">
-                        <div className="px-2 lg:px-14 flex items-center justify-between">
-                            <button className="py-4 px-3 text-white text-center lg:text-center text-sm w-full border-b border-opacity-0 focus:border-white focus:border-opacity-40" onClick={GraphicDesignHandler}>Graphic Design</button>
-                            <button className="py-4 px-3 text-white text-center lg:text-center text-sm w-full border-b border-opacity-0 focus:border-white focus:border-opacity-40" onClick={UIDesignHandler}>UI Design</button>
-                            <button className="py-4 px-3 text-white text-center lg:text-center text-sm w-full border-b border-opacity-0 focus:border-white focus:border-opacity-40" onClick={FrontEndDevHandler}>Front End Dev</button>
+                    <div className="profile-down h-300 w-screen mt-20 md:w-full">
+                        <div className="px-5 border-b border-white border-opacity-20 lg:px-14 flex items-end md:items-center justify-between">
+                            <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={GraphicDesignHandler}>Graphic Design</button>
+                            <button className="h-80 px-3 text-white text-center lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={UIDesignHandler}>UI Design</button>
+                            <button className="h-80 px-3 text-white text-left lg:text-center text-sm w-full border-b-2 border-opacity-0 focus:border-white focus:border-opacity-70" onClick={FrontEndDevHandler}>Front End Dev</button>
                         </div>
 
-                        <div className="mt-10">
+                        <div className="mt-10 px-5">
                             {desc}
                         </div>
                     </div>
